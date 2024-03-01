@@ -11,12 +11,13 @@ body{
     max-width: 500px;
     margin: auto;   
     mix-blend-mode: hard-light;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
 .wait:hover{
-    filter: blur(0.25px);
+    filter: blur(0.5px);
     width: 100%;
     height: auto;
-    transform: scaleY(4.5);
+    transform: scaleY(5);
     transform: skewY(10deg);
     background-color: rgb(255, 123, 0);
 }
