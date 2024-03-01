@@ -1,6 +1,32 @@
-.wait {cursor: wait;}
+.wait {
+    cursor: wait;
+}
+.head{
+  color: white;  
+}
 body{
+    background-image: url(../obstruction/charli/charli-xcx.gif); 
+    background-repeat: repeat-x, repeat-x;
     background-color: #8ace00;
     max-width: 500px;
-    margin: auto;
+    margin: auto;   
+    mix-blend-mode: hard-light;
+    }
+.wait:hover{
+    filter: blur(40%);
+    width: 100%;
+    height: auto;
+    transform: scaleY(4.5);
+    transform: skewY(10deg);
+    background-color: rgb(255, 123, 0);
+}
+img {
+  border: 3px solid #000000;
+  border-radius: 4px;
+  padding: 5px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
