@@ -1,0 +1,29 @@
+body{
+    background-color: blanchedalmond;
+    max-width: 500px;
+    margin-left: 50%;
+}
+a:link{
+  color: red
+}
+a:visited{
+  color:crimson
+}
+.baby-boy {
+    color: red;
+    width: 50%;
+  }
+  img {
+    width: 100%;
+  }
+  p {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 10px;
+  }
+.navigation{
+  position:fixed;
+  top: 0%;
+  left: 0%;
+  color: dodgerblue;
+}
