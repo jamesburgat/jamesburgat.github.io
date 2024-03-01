@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>My test page</title>
+    <title>Obstruction</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -12,44 +12,42 @@
     <a href="../../exercises/index.html">Exercises</a> 
     <a href="../a-rabbit-hole/index.html">A rabbit Hole</a>
     <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
     <form action="/action_page.php">
-    <label for="food">What's my favorite food?</label>
-    <select name="food" id="food">
+     <label for="food">What's my favorite food?</label>
+     <select name="food" id="food">
       <option value="candy">Candy</option>
       <option value="pickles">Pickles</option>
       <option value="cheese">Cheese</option>
       <option value="salami">Salami</option>
-    </select>
-    <br><br>
-    <a href="charli/index.html">
-        <input type="submit" value="Submit">
-    </a>
+     </select>
+     <br><br>
+     <a href="charli/index.html">
+         <input type="submit" value="Submit">
+     </a>
+     <a href="charli/index.html">
+        <input type="submit"/>
+     </a>
+    </form>
     <a href="charli/index.html">
         <button>Submit</button>
-    </a>
-    <a href="charli/index.html">
-        <input type="submit"/>
-    </a>
+     </a>
     <p></p>
     <p></p>
     <p></p>
     <p></p>
-  </form>
-    <input type="password" placeholder="passcode" id="tutorial">
+
+    <input type="password" placeholder="passcode" id="vibe">
        <button onclick="protectpasscode()">CHECK</button>
        <script>
           function protectpasscode() {
-             const result = document.getElementById("tutorial").value;
+             const result = document.getElementById("vibe").value;
              let passcode = pickles;
              let space = '';
              if (result == space) {
                 alert("Type passcode")
              } else {
                 if (result == passcode) {
-                   document.write("<center><h1> Correct! </h1></center>");
+                   document.write("<center><h1> Correct! But not the right button </h1></center>");
                 } else {
                    alert("Incorrect Passcode");
                    location.reload();
