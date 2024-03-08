@@ -35,3 +35,26 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+
+.button {
+  background-color: #3d2d6b;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  gap: 10px;
+  font-family: monospace; 
+}
+
+.button:hover {
+  font-size: 18px;
+  mix-blend-mode: darken;
+  background-color: #078800;
+  transition: 150ms;
+  color: white;
+  cursor: not-allowed;
+}

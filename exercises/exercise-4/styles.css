@@ -1,18 +1,14 @@
-body{
-    background-color: blanchedalmond;
-    gap: 10px;
-    max-width: 100%;
-    display: block;
-    flex-wrap: wrap;
-    justify-content: left;
-    font-family: "Madimi One", sans-serif;
-
-    @media screen and (min-width: 60rem) {
-      margin: 2rem;
-      display: grid;
-      grid-template-columns: 400px 1fr;
-    }
-  }
+body {
+  background-color: blanchedalmond;
+  gap: 10px;
+  max-width: 100%;
+  display: block;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: left;
+  font-family: "Madimi One", sans-serif;
+  align-items: start;
+}
 
 @font-face {
   font-family: "Absans";
@@ -20,7 +16,11 @@ body{
   font-weight: normal;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: 'Absans', Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -30,33 +30,36 @@ h1, h2, h3, h4, h5 {
   font-style: normal;
 }
 
-a:link{
+a:link {
   color: rgb(255, 149, 149)
 }
-a:visited{
-  color:rgb(197, 96, 116)
+
+a:visited {
+  color: rgb(197, 96, 116)
 }
+
 .baby-boy {
-    color: rgb(218, 74, 74);
-    width: 50%;
-  }
-  img {
-    width: 100%;
-  }
-  p {
-    font-size: 16px;
-    border: 10px;
-  }
-.navigation{
-  position:sticky;
-  top: 0%;
-  left: 0%;
+  color: rgb(218, 74, 74);
+  width: 50%;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  font-size: 16px;
+  border: 10px;
+}
+
+.navigation {
+  position: relative;
+  border: 1px solid black;
+  top: 2rem;
+  padding: 1rem;
+  margin: 1rem;
   color: dodgerblue;
   display: none;
-  @media screen and (min-width: 40rem) {
-    display: block;
-    margin-top: 1rem;
-  }
 }
 
 .button {
@@ -70,7 +73,7 @@ a:visited{
   display: inline-block;
   font-size: 12px;
   gap: 10px;
-  font-family: monospace; 
+  font-family: monospace;
 }
 
 .button:hover {
@@ -82,11 +85,25 @@ a:visited{
   cursor: not-allowed;
 }
 
+@media screen and (min-width: 40rem) {
+  body {
+
+  }
+
+  .navigation {
+    display: block;
+  }
+}
 
 @media screen and (min-width:60rem) {
- body {
-  margin: 2rem;
-  display: grid;
-  grid-template-columns: 400px 1fr;
- }
+  body {
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+  }
+
+  .navigation {
+    position: sticky;
+    top: 2rem;
+  }
 }
