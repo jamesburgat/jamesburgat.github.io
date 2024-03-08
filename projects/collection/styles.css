@@ -62,17 +62,15 @@ body {
     max-width: 500px;
     height: auto;
     filter: blur(0px);
-    cursor: zoom-in;
+    cursor: none;
 
 }
 
 @keyframes gradient {
     0% {
-        transform: rotate(360deg)
-    }
+background-position: 0%;}
     100% {
-        transform: rotate(0deg)
-     }
+background-position: 100%;}
 }
 
 @media (max-width: 600px) {
