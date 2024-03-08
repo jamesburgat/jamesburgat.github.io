@@ -1,0 +1,31 @@
+.button {
+    background-color: #3d2d6b;
+    mix-blend-mode: darken;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    padding: 30px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 34px;
+    gap: 10px;
+    font-family: monospace;
+}
+
+.button:hover {
+    font-size: 68px;
+    mix-blend-mode: screen;
+    background-color: #078800;
+    transition: 150ms;
+    color: white;
+    cursor: not-allowed;
+}
+
+body {
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    background-color: mediumseagreen;
+}

@@ -1,12 +1,35 @@
 body{
     background-color: blanchedalmond;
-    max-width: 500px;
-    margin-left: 50%;
     gap: 10px;
-    display: flex;
+    max-width: 100%;
+    display: block;
     flex-wrap: wrap;
     justify-content: left;
+    font-family: "Madimi One", sans-serif;
+
+    @media screen and (min-width: 60rem) {
+      margin: 2rem;
+      display: grid;
+      grid-template-columns: 400px 1fr;
+    }
+  }
+
+@font-face {
+  font-family: "Absans";
+  src: url(fonts/Absans-Regular.woff2) format("woff2");
+  font-weight: normal;
 }
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Absans', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.madimi-one-regular {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 a:link{
   color: rgb(255, 149, 149)
 }
@@ -22,14 +45,18 @@ a:visited{
   }
   p {
     font-size: 16px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     border: 10px;
   }
 .navigation{
-  position:fixed;
+  position:sticky;
   top: 0%;
   left: 0%;
   color: dodgerblue;
+  display: none;
+  @media screen and (min-width: 40rem) {
+    display: block;
+    margin-top: 1rem;
+  }
 }
 
 .button {
@@ -53,4 +80,13 @@ a:visited{
   transition: 150ms;
   color: white;
   cursor: not-allowed;
+}
+
+
+@media screen and (min-width:60rem) {
+ body {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+ }
 }
