@@ -1,0 +1,141 @@
+body {
+  background-color: blanchedalmond;
+  max-width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+a:link {
+  color: red
+}
+
+a:visited {
+  color: rgb(121, 10, 32)
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: 10px;
+}
+
+.navigation {
+  border: 1px solid black;
+  position: sticky;
+  display: block;
+  top: 2rem;
+  left: 2rem;
+  padding: 1rem;
+  margin: 1rem;
+  color: dodgerblue;
+}
+
+.navigation ol {
+  list-style: none;
+}
+
+ol {
+  margin: 0;
+  padding: 1rem;
+}
+
+ol ol {
+  padding-left: 2rem;
+}
+
+.navigation li {
+  border-bottom: 1px solid black;
+}
+
+.related {
+  background-color: rgb(224, 130, 255);
+}
+
+.related__section-title {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.related__essay {
+  background-color: rgb(136, 225, 255);
+  margin-bottom: 1rem;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  margin: 1rem;
+}
+
+.related__title {
+  font-family: sans-serif;
+}
+
+.related__author {
+  font-family: sans-serif;
+}
+
+flexbox example .related {
+  background-color: rgb(254, 255, 193);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.related__section-title {
+  flex-basis: 100%;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.related__essay {
+  border: 2px;
+  border: 1px solid black;
+  background-color: rgb(175, 214, 227);
+  padding: 1rem;
+  flex-basis: calc(100% / 3);
+  box-sizing: border-box;
+}
+
+.related__title {
+  font-family: sans-serif;
+}
+
+.related__author {
+  font-family: sans-serif;
+}
+
+*/ nth-child example .related__essay:nth-child(odd) {
+  background-color: rgb(175, 214, 227);
+}
+
+.related__essay:nth-child(odd) {
+  background-color: rgb(175, 227, 210);
+}
+
+.navigation a {
+  display: block;
+  padding: 0.5rem;
+}
+.navigation a:hover {
+  color: black;
+}
+
+:target::before{
+  content: "❃";
+  display: inline-block;
+  animation: current-header 1s ease infinite reverse;
+}
+
+@keyframes current-header {
+  0%{
+    transform: rotate(360deg) scale(1);
+  }
+  100%{
+    transform: rotate(360deg) scale(2);
+  }
+}

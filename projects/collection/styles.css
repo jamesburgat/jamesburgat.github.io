@@ -1,0 +1,87 @@
+body {
+    background-size: 40px 40px;
+    background-image: radial-gradient(circle, #ffffff 2px, rgba(0, 0, 0, 0) 1px);
+    background-color: rgb(0, 0, 0);
+    max-width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 4rem;
+    gap: 2rem;
+    align-items: start;
+  }
+
+.huge{
+    font-family: monospace;    
+    font-stretch: ultra-expanded;
+    font-size: 500%;
+    font-weight: bold;
+    color: beige;
+    text-align: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 109, 243, 0.5);
+    mix-blend-mode: difference;    
+    padding: 10px;
+}
+
+.header {
+    padding: 30px;
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: monospace;
+    color: beige;
+  }
+
+.row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .column {
+    flex: 1;
+    padding: 10px;
+    height: auto;
+    padding-bottom: 10px;
+    background-image: linear-gradient(to bottom right, rgb(61, 0, 183), rgba(191, 0, 255, 0.471));
+    animation-name: gradient;
+    animation-duration: 4s infinite;
+    font-family: monospace; 
+    text-transform: uppercase;   
+    color: beige;
+}
+
+.column img{
+    max-width: 100%;
+    height: auto;
+    filter: blur(5px);
+}
+
+.column img:hover{
+    max-width: 500px;
+    height: auto;
+    filter: blur(0px);
+    cursor: zoom-in;
+
+}
+
+@keyframes gradient {
+    0% {
+        transform: rotate(360deg)
+    }
+    100% {
+        transform: rotate(0deg)
+     }
+}
+
+@media (max-width: 600px) {
+    .row {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+}
+.space{
+    padding: 10px;
+}
+
