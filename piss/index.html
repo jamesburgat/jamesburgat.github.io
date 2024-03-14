@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Repeated Pattern of Images</title>
+<style>
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust the minimum and maximum size of the columns as needed */
+        gap: 0px; /* Adjust the gap between images as needed */
+    }
+    .image {
+        width: 100%; /* Ensures images take full width of their container */
+        height: auto; /* Maintains aspect ratio */
+        object-fit: cover; /* Prevents distortion */
+    }
+
+        /* Popup container */
+        .popup {
+        display: none; /* Hide the popup by default */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 20px;
+        z-index: 9999;
+    }
+
+    /* Overlay */
+    .overlay {
+        display: none; /* Hide the overlay by default */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        z-index: 9998;
+    }
+
+    .popup-image {
+    max-width: 500px; /* Adjust the maximum width of the image */
+    max-height: 500px; /* Adjust the maximum height of the image */
+    width: auto; /* Allow the image to adjust its width while maintaining aspect ratio */
+    height: auto; /* Allow the image to adjust its height while maintaining aspect ratio */
+    display: block;
+    margin: 0 auto;
+     }
+
+    /* Button styling */
+    .popup-button {
+        display: block;
+        margin-top: 10px;
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <div class="popup" id="popup">
+        <img src="DS2.svg" alt="Popup Image" class="popup-image">
+        <button class="popup-button" onclick="closePopup()">Dismiss</button>
+    </div>
+    
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+    
+    <script>
+        // Function to display the popup
+        function showPopup() {
+            document.getElementById("popup").style.display = "block";
+            document.getElementById("overlay").style.display = "block";
+        }
+    
+        // Function to close the popup
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+            document.getElementById("overlay").style.display = "none";
+        }
+    
+        // Show the popup when the page is loaded
+        window.onload = showPopup;
+    </script>
+    
+
+<div class="container" id="imageContainer"></div>
+<script>
+    // Array of image paths
+    const images = ["FRI.svg", "SAT.svg", "SUN.svg", "MON.svg", "TUE.svg"];
+
+    // Function to shuffle an array
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    // Function to populate the container with images
+    function populateImages() {
+        const container = document.getElementById("imageContainer");
+        container.innerHTML = ""; // Clear previous content
+        const shuffledImages = shuffleArray(images); // Shuffle the images array
+        for (let i = 0; i < 200; i++) { // Repeat images 100 times (adjust as needed)
+            shuffledImages.forEach(image => {
+                const img = document.createElement("img");
+                img.src = image;
+                img.alt = "Image";
+                img.classList.add("image");
+                container.appendChild(img);
+            });
+        }
+    }
+
+    // Populate images initially
+    populateImages();
+</script>
+</body>
+</html>
